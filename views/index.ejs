@@ -19,7 +19,7 @@
                             <h5 class="card-title text-light">Input text</h5>
                         </div>
                         <div class="card-body">
-                            <form action="/api/v1/translate" method="POST">
+                            <form action="https://translator-0053.onrender.com/api/v1/translate" method="POST">
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea1">Enter Text</label>
                                     <textarea class="form-control" id="text" name="text" rows="5"></textarea>
@@ -89,10 +89,9 @@
                         <div class="card-header bg-success">
                             <h5 class="card-title text-light">Output text</h5>
                         </div>
-                        <div class="card-body">  
-                            <!-- Notice how we bring in the response data sent as we render the same page by the request -->
+                        <div class="card-body"> 
                             <textarea class="form-control text-success text-start" name="translated" id="translated" cols="30" rows="12">
-                                <%=translatedText%>
+                                <!-- <%=translatedText%> -->
                             </textarea>                  
                         </div>
                     </div>
