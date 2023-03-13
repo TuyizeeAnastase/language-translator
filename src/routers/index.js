@@ -10,7 +10,7 @@ routes.get("/", (req, res) => {
 
 routes.use("/api/v1/translater", translateRouter);
 
-routes.post("/api/v1/translate", (req, res) => {
+routes.post("translate", (req, res) => {
   // get form data from the request body
   const { text, lan } = req.body;
   translate(text, { to: lan })
