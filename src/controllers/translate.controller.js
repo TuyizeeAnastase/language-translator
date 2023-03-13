@@ -7,6 +7,7 @@ export class Translate {
       const translated = await translate(text, { to: lan });
       return res.status(201).json({
         translated: translated.text,
+        language:lan
       });
     } catch (err) {
       return res.status(500).json({

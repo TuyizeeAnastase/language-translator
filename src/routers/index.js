@@ -10,12 +10,14 @@ routes.get("/", (req, res) => {
 
 routes.use("/api/v1/translater", translateRouter);
 
-routes.post("translate", (req, res) => {
+routes.post("/api/v1/translate", (req, res) => {
   // get form data from the request body
   const { text, lan } = req.body;
   translate(text, { to: lan })
     .then((response) => {
-      res.render("index.ejs", { translatedText: response.text });
+      res.render("index.ejs", {
+        translatedText: response.text,
+      });
     })
     .catch((err) => {
       console.error(err);
